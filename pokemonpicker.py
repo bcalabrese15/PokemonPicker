@@ -1,4 +1,6 @@
+import json
+
 input = input("Please input file location: ")
-file = open(input, "r")
-for line in file:
-	print(line)
+with open(input) as f:
+	data = json.load(f)
+print(data)
